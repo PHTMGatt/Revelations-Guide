@@ -1,0 +1,27 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0068bd; /* Blue background */
+}
+
+.title-box {
+  display: flex;
+  align-items: center;
+}
+
+.title-box h1 {
+  font-size: 2rem;
+  color: black; /* Default color for Origins Easter Egg */
+}
+
+.title-box h1 span {
+  color: white; /* White color for Little Lost Girl */
+}
+
+.revive-header-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}

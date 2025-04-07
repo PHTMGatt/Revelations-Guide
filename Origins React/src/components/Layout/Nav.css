@@ -1,0 +1,36 @@
+.nav {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  padding: 10px 20px;
+  background-color: #0068bd; /* Dark blue background */
+  color: white;
+  /* Remove the border-bottom line */
+  /* border-bottom: 3px solid #004b8f;  */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  list-style-type: none; /* Remove bullet points */
+}
+
+.nav-links a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links a svg {
+  margin-right: 5px; /* Adds space between the icon and the text */
+}
+
+.nav-links a.active {
+  color: yellow; /* You can change this color to match your theme */
+}
