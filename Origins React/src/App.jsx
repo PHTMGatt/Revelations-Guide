@@ -16,6 +16,7 @@ import LightningStaff from "./components/Pages/LightningStaff";
 
 // Global Styles
 import "./global.css";
+import "./global.d.ts";
 
 function App() {
   return (
