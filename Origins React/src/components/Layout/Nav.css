@@ -1,36 +1,68 @@
+/* Element nav bar inside header */
 .nav {
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
-  padding: 10px 20px;
-  background-color: #0068bd; /* Dark blue background */
-  color: white;
-  /* Remove the border-bottom line */
-  /* border-bottom: 3px solid #004b8f;  */
+  align-items: center;
+  gap: 24px;
+  background: none;
+  box-shadow: none;
 }
 
+/* Nav links container */
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
-  list-style-type: none; /* Remove bullet points */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
-  color: white;
-  font-size: 16px;
-  text-decoration: none;
+/* Base nav link */
+.nav-link {
   display: flex;
   align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+/* Nav icons */
+.nav-link svg {
+  font-size: 18px;
+  transition: transform 0.2s ease;
 }
 
-.nav-links a svg {
-  margin-right: 5px; /* Adds space between the icon and the text */
+.nav-link:hover svg {
+  transform: scale(1.1);
 }
 
-.nav-links a.active {
-  color: yellow; /* You can change this color to match your theme */
+/* Elemental hover themes */
+.nav-link.main:hover {
+  color: #3dbdff;
+}
+
+.nav-link.ice:hover {
+  color: #78e8e1;
+}
+
+.nav-link.fire:hover {
+  color: #ff7844;
+}
+
+.nav-link.wind:hover {
+  color: #ffe657;
+}
+
+.nav-link.lightning:hover {
+  color: #d8a8ff;
+}
+
+/* Optional active state */
+.nav-link.active {
+  font-weight: bold;
+  color: #ffffff;
+  border-bottom: 2px solid currentColor;
 }

@@ -1,8 +1,22 @@
-# React + Vite
+# Origins EE Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+👻 Welcome to the **Origins EE Guide** — your immersive walkthrough for uncovering every Easter Egg on the Origins Zombies map.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Try it out on Render:  
+[https://your-origins-guide.onrender.com](https://your-origins-guide.onrender.com)
+
+## 📸 Screenshot
+
+![App Screenshot](src/assets/Pictures/ReadMe.png)
+
+## 🔍 What’s Inside
+
+- **Full Origins Map** – Explore every nook and cranny of the classic map.  
+- **Easter Egg Walkthroughs** – Clear, step-by-step guides for all hidden quests.  
+- **Elemental Staff Locations** – Fire, Ice, Wind & Lightning staff build guides.  
+
+---
+
+*More features coming soon — stay tuned!*  

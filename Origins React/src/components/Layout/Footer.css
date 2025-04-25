@@ -1,21 +1,23 @@
 /* General styling for the footer */
 .footer {
-  width: 100%;
-  padding: 0.75rem 0.5%; /* Adds slight edge breathing room */
-  background-color: #0072CE;
-  color: rgb(0, 0, 0);
+  width: auto;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #02121e, #004e91, #02121e); /* matches header/nav */
+  color: white;
   text-align: center;
   font-weight: 500;
-  border-radius: 8px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  margin: 1rem auto; /* Reduced margin to create space */
-  max-width: 100%; /* Ensures the footer extends across full width */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  max-width: calc(100% - 20px);
   box-sizing: border-box;
   font-size: 1rem;
+  backdrop-filter: blur(6px);
 }
 
-/* Styling for the text in the footer */
+/* Footer lock/key line */
 .footer-lock {
   font-size: 1rem;
   margin-top: 4px;
+  color: #6dc2ff; /* subtle highlight if desired */
 }

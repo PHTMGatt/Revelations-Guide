@@ -15,10 +15,17 @@ html, body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   color: var(--text-color);
-  background-color: #000;
+  background-image: url('./assets/Pictures/Robot.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
 }
+
+
 
 /* Full-height page container */
 .layout-container {
