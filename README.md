@@ -1,22 +1,23 @@
-# Revelations EE Guide
+# 🔮 Revelations EE Guide
 
-👻 Welcome to the **Revelations EE Guide** — your immersive walkthrough for uncovering every Easter Egg on the Revelations Zombies map.
+🌀 Step into the void with the **Revelations EE Guide** — your all-in-one companion for mastering the final chapter of Black Ops III Zombies.
 
 ## 🚀 Live Demo
 
-Try it out on Render:  
+Explore the portal:  
 [https://your-revelations-guide.onrender.com](https://your-revelations-guide.onrender.com)
 
 ## 📸 Screenshot
 
-![App Screenshot](src/assets/Pictures/ReadMe.png)
+![App Screenshot](src/assets/images/ReadMe.png)
 
-## 🔍 What’s Inside
+## 🗺️ What’s Inside
 
-- **Full Revelations Map** – Explore every nook and cranny of the classic map.  
-- **Easter Egg Walkthroughs** – Clear, step-by-step guides for all hidden quests.  
-- **Elemental Staff Locations** – Fire, Ice, Wind & Lightning staff build guides.  
+- **Full Map Access** – Navigate every twisted realm within the Apothicon nightmare.  
+- **Main Easter Egg Guide** – Step-by-step breakdown to unlock the secrets of the Summoning Key.  
+- **Side Quest Support** – Track reels, bones, audio cues, and more.  
+- **Advanced Mechanics** – Weapon upgrades, sound puzzles, and portal throws.
 
 ---
 
-*More features coming soon — stay tuned!*  
+🔥 *More cosmic horrors and guide pages coming soon... Stay alive, stay tuned.*
