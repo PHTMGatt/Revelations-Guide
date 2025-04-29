@@ -1,11 +1,11 @@
-# Origins EE Guide
+# Revelations EE Guide
 
-👻 Welcome to the **Origins EE Guide** — your immersive walkthrough for uncovering every Easter Egg on the Origins Zombies map.
+👻 Welcome to the **Revelations EE Guide** — your immersive walkthrough for uncovering every Easter Egg on the Revelations Zombies map.
 
 ## 🚀 Live Demo
 
 Try it out on Render:  
-[https://your-origins-guide.onrender.com](https://your-origins-guide.onrender.com)
+[https://your-revelations-guide.onrender.com](https://your-revelations-guide.onrender.com)
 
 ## 📸 Screenshot
 
@@ -13,7 +13,7 @@ Try it out on Render:
 
 ## 🔍 What’s Inside
 
-- **Full Origins Map** – Explore every nook and cranny of the classic map.  
+- **Full Revelations Map** – Explore every nook and cranny of the classic map.  
 - **Easter Egg Walkthroughs** – Clear, step-by-step guides for all hidden quests.  
 - **Elemental Staff Locations** – Fire, Ice, Wind & Lightning staff build guides.  
 

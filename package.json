@@ -1,30 +1,37 @@
 {
-  "name": "origins-react",
+  "name": "revelations-guide",
   "version": "1.0.0",
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "main": "eslint.config.js",
+  "description": "A cosmic-themed Revelations Easter Egg guide built in React + Vite.",
+  "main": "src/main.jsx",
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "render": "vite preview --port 10000",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --port 10000",
+    "render": "vite preview --port 10000"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "vite",
+    "zombies",
+    "revelations",
+    "easter egg"
+  ],
+  "author": "BryGuy",
   "license": "ISC",
   "dependencies": {
-    "origins-react": "file:",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.5.0"
+    "react-router-dom": "^6.22.2",
+    "react-youtube": "^10.1.0",
+    "revelations-guide": "file:"
   },
   "devDependencies": {
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.1",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.3.4",
-    "typescript": "^5.8.3",
-    "vite": "^6.2.5"
+    "typescript": "^5.3.3",
+    "vite": "^4.4.9"
   }
 }

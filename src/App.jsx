@@ -1,40 +1,32 @@
-// src/App.jsx
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-
-// Layout
-import Header from "./components/Layout/Header";
-import Nav from "./components/Layout/Nav";
-import Footer from "./components/Layout/Footer";
-
-// Pages
-import MainGuide from "./components/Pages/MainGuide";
-import FireStaff from "./components/Pages/FireStaff";
-import IceStaff from "./components/Pages/IceStaff";
-import WindStaff from "./components/Pages/WindStaff";
-import LightningStaff from "./components/Pages/LightningStaff";
-
-// Global Styles
-import "./global.css";
-import "./global.d.ts";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import MainGuide from './pages/MainGuide';
+import ApotheconUpgrade from './pages/ApothiconUpgrade';
+import EggLocations from './pages/EggLocations';
+import SummoningKey from './pages/SummoningKey';
+import SoundStep from './pages/SoundStep';
+import './global.css';
 
 function App() {
   return (
-    <div className="layout-container">
-      <Header /> {/* Now includes Nav inside */}
-      <main>
+    <Router>
+      <div className="app">
+        <Header />  {/* ✅ Nav is already inside Header now */}
+
         <Routes>
           <Route path="/" element={<MainGuide />} />
-          <Route path="/FireStaff" element={<FireStaff />} />
-          <Route path="/IceStaff" element={<IceStaff />} />
-          <Route path="/WindStaff" element={<WindStaff />} />
-          <Route path="/LightningStaff" element={<LightningStaff />} />
+          <Route path="/apothicon-upgrade" element={<ApotheconUpgrade />} />
+          <Route path="/egg-locations" element={<EggLocations />} />
+          <Route path="/summoning-key" element={<SummoningKey />} />
+          <Route path="/sound-step" element={<SoundStep />} />
         </Routes>
-      </main>
-      <Footer />
-    </div>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
-
 
 export default App;

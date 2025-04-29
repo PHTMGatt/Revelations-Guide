@@ -1,0 +1,146 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.upgrade-page-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background: url('/src/assets/rev-guide/Main/Revelations.webp') no-repeat center center/cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+.upgrade-blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.upgrade-main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 5px #000;
+  color: #cce6ff;
+  margin-bottom: 2rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.upgrade-video-wrapper {
+  width: 100%;
+  max-width: 960px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.7); /* Bigger glow effect */
+  border: 4px solid rgba(109, 194, 255, 0.7); /* Border to enhance visibility */
+  margin-bottom: 1rem;
+  z-index: 2;
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+.upgrade-video-wrapper:hover {
+  box-shadow: 0 0 40px rgba(109, 194, 255, 1); /* Stronger glow on hover */
+  transform: scale(1.03); /* Slight zoom effect */
+}
+
+
+.upgrade-caption {
+  color: #aad4ff;
+  font-size: 1rem; /* Adjust to match your screenshot size */
+  text-shadow: 1px 1px 2px #000; /* Small shadow to match the effect */
+  text-align: center; /* Center the caption text */
+  margin: 0 0 .3rem; /* Centered with small bottom margin */
+  padding: 0; /* Remove extra padding */
+  width: 100%; /* Make it span the full width */
+  max-width: 960px; /* Limit width like other content */
+  z-index: 2;
+  display: inline-block; /* Keep it inline for smaller width and more control */
+  background: transparent; /* No background box like the second screenshot */
+}
+
+
+
+
+
+/* Featured Card */
+.featured-section {
+  background: rgba(0, 0, 0, 0.55);
+  border: 2px solid rgba(109, 194, 255, 0.7);
+  box-shadow: 0 0 25px rgba(109, 194, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 2rem;
+  border-radius: 18px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #cce6ff;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Cards */
+.upgrade-cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  max-width: 960px;
+  width: 100%;
+  z-index: 2;
+}
+
+.upgrade-card {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #aad4ff;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid rgba(109, 194, 255, 0.5);
+  box-shadow: 0 0 15px rgba(109, 194, 255, 0.4);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.upgrade-card:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+.upgrade-card.active {
+  background: rgba(109, 194, 255, 0.2);
+  border: 2px solid #6dc2ff;
+  box-shadow: 0 0 20px rgba(109, 194, 255, 0.8);
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .upgrade-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured-section {
+    font-size: 1.5rem;
+  }
+}

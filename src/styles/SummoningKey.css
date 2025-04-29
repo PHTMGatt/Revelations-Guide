@@ -1,0 +1,122 @@
+/* src/styles/SummoningKey.css */
+
+.sk-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Dark blurred animated background always ON */
+.sk-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/src/assets/rev-guide/Main/Revelations.webp") no-repeat center center/cover;
+  filter: blur(8px) brightness(0.4); /* Always blurred + dark */
+  animation: bgFloat 40s ease-in-out infinite alternate; /* OPTIONAL: subtle slow motion */
+  z-index: 0;
+}
+
+/* Making sure your content floats above background */
+.sk-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes bgFloat {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+  }
+  100% {
+    transform: scale(1.05) translate(10px, 10px);
+  }
+}
+
+/* Title */
+.sk-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #aad4ff;
+  text-shadow: 2px 2px 5px #000;
+  margin-bottom: 2rem;
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+}
+
+/* Video */
+.sk-card {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #2b9eff77;
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sk-video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Caption */
+.sk-caption {
+  font-size: 1.1rem;
+  color: #cce6ff;
+  margin: 1rem 0;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Buttons Grid */
+.sk-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Legendary Buttons */
+.sk-button {
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.2) 0%, rgba(10, 10, 30, 0.85) 80%);
+  border: 2px solid #00c3ff;
+  color: #aad4ff;
+  padding: 0.8rem 1.2rem;
+  font-family: 'Orbitron', 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 6px #00f7ff, 0 0 12px #00e6ff;
+  box-shadow: inset 0 0 20px rgba(0, 191, 255, 0.4), 0 0 10px rgba(0, 191, 255, 0.4);
+}
+
+/* Hover effect */
+.sk-button:hover {
+  background: radial-gradient(circle at center, rgba(0, 191, 255, 0.3) 0%, rgba(0, 0, 0, 0.8) 80%);
+  color: black;
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 30px #00c3ff, inset 0 0 20px #00e6ff;
+}
+
+/* Active button */
+.sk-button.active {
+  background: linear-gradient(90deg, #00d0ff 0%, #0078ff 100%);
+  color: black;
+  box-shadow: 0 0 40px #00d0ff, 0 0 20px #0078ff inset;
+  transform: scale(1.07) rotate(1deg);
+}

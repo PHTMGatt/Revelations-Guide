@@ -1,48 +1,38 @@
 :root {
-  --background: #0068bd;
-  --text-color: white;
-  --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  --font-size-base: 16px;
+  --text-primary: #e0d7ff;
+  --text-secondary: #bbb0d9;
+  --accent-hover: rgba(157, 117, 203, 0.2);
+  --text-glow: #b783ff;
+  --background-primary: #0c0c1b;
+  --background-secondary: #181830;
 }
 
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  color: var(--text-color);
-  background-image: url('./assets/Pictures/Robot.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--background-primary), var(--background-secondary));
+  color: var(--text-primary);
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-/* Full-height page container */
-.layout-container {
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 100%;
-}
-
-main {
-  flex: 1;
-  display: block;
-  width: 100%;
-}
-
-/* Utility to add space between edges of screen */
-.edge-padding {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
