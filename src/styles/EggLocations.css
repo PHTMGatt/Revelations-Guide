@@ -1,153 +1,165 @@
-/* EggLocations.css */
-
-/* Main Container */
-.egg-locations-container {
+.rev-page {
   position: relative;
+  padding: 5rem 1rem;
   min-height: 100vh;
-  background: url('/src/assets/rev-guide/Main/Revelations.webp') no-repeat center center/cover;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 3rem 2rem;
-  color: #ffffff;
-  text-align: center;
-  overflow-x: hidden;
-  background-attachment: fixed;
-  z-index: 0;
-}
-
-/* Background Blur Overlay */
-.egg-blur-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(8px);
-  background-color: rgba(0, 0, 0, 0.3);
+  flex-direction: column;
   z-index: 1;
 }
 
-/* Main Title */
-.egg-main-title {
-  font-size: 3rem;
+.rev-background {
+  position: absolute;
+  inset: 0;
+  background: url('/src/assets/rev-guide/Main/Revelations.webp') no-repeat center center/cover;
+  filter: blur(10px) brightness(0.3);
+  z-index: 0;
+  animation: bgFloat 40s ease-in-out infinite alternate;
+}
+
+@keyframes bgFloat {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+  }
+  100% {
+    transform: scale(1.05) translate(10px, 10px);
+  }
+}
+
+.sk-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  color: #aad4ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sk-title {
+  font-size: 2.8rem;
   font-weight: 800;
-  text-shadow: 2px 2px 5px #000;
   margin-bottom: 2rem;
   color: #cce6ff;
+  text-shadow: 2px 2px 6px #000;
+  cursor: pointer;
+}
+
+.rev-glow-box {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  border: 2px solid rgba(109, 194, 255, 0.5);
+  box-shadow: 0 0 40px rgba(109, 194, 255, 0.35), 0 0 80px rgba(0, 255, 255, 0.15) inset;
+  padding: 2rem 1.5rem;
+  max-width: 1000px;
+  width: 100%;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
   z-index: 2;
 }
 
-/* Video Frame */
-.egg-video-wrapper {
+.video-card {
   width: 100%;
   max-width: 960px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.7); /* Bigger glow effect */
-  border: 4px solid rgba(109, 194, 255, 0.7); /* Border to enhance visibility */
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+  border: 4px solid rgba(109, 194, 255, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   margin-bottom: 1rem;
-  z-index: 2;
-  transition: all 0.3s ease; /* Smooth transition on hover */
+  transition: all 0.3s ease;
 }
 
-.egg-video-wrapper:hover {
-  box-shadow: 0 0 40px rgba(109, 194, 255, 1); /* Stronger glow on hover */
-  transform: scale(1.03); /* Slight zoom effect */
-}
-
-.egg-caption {
+.video-caption {
+  font-size: 0.95rem;
   color: #aad4ff;
-  font-size: 1rem; /* Adjust to match your screenshot size */
-  text-shadow: 1px 1px 2px #000; /* Small shadow to match the effect */
-  text-align: center; /* Center the caption text */
-  margin: 0 0 .3rem; /* Centered with small bottom margin */
-  padding: 0; /* Remove extra padding */
-  width: 100%; /* Make it span the full width */
-  max-width: 960px; /* Limit width like other content */
-  z-index: 2;
-  display: inline-block; /* Keep it inline for smaller width and more control */
-  background: transparent; /* No background box like the second screenshot */
+  padding: 0.5rem 0;
+  text-shadow: 1px 1px 2px #000;
+  background: rgba(0, 0, 0, 0.35);
 }
 
-/* Glass Cards */
+.sk-selected-label {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 1.2rem 0 1.6rem;
+  color: #6dc2ff;
+  text-shadow: 0 0 10px #00bfff;
+}
+
+.sk-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.sk-button {
+  background: transparent;
+  border: 2px solid #00c3ff;
+  color: #aad4ff;
+  padding: 0.7rem 1.3rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 12px rgba(0, 191, 255, 0.25), 0 0 10px rgba(0, 191, 255, 0.3);
+}
+
+.sk-button:hover {
+  background: rgba(0, 255, 255, 0.15);
+  transform: scale(1.04);
+}
+
+.egg-section-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
 .egg-glass-card {
-  background: rgba(0, 0, 0, 0.65);
-  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 16px;
   padding: 2rem;
-  margin-bottom: 2rem;
   width: 90%;
   max-width: 1000px;
   backdrop-filter: blur(14px);
   box-shadow: 0 10px 30px rgba(0, 200, 255, 0.3);
   border: 1px solid rgba(173, 216, 230, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 2;
+  cursor: pointer;
 }
 
-/* Featured Card (Selected) */
-.featured-card {
-  background: rgba(0, 0, 0, 0.75);
-  border-radius: 20px;
-  padding: 2.5rem;
-  margin-bottom: 2rem;
-  width: 95%;
-  max-width: 1000px;
-  backdrop-filter: blur(16px);
-  box-shadow: 0 0 30px rgba(0, 200, 255, 0.6), 0 0 50px rgba(0, 255, 255, 0.4);
-  border: 2px solid rgba(0, 255, 255, 0.5);
-  transform: scale(1.02);
-  transition: all 0.3s ease;
-  z-index: 3;
-}
-
-/* Hover Effects on Normal Cards */
 .egg-glass-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
 }
 
-/* Section Subtitle */
 .egg-subtitle {
   font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   color: #aad4ff;
+  text-align: center;
   text-shadow: 1px 1px 3px #000;
-  z-index: 2;
 }
 
-/* Egg Locations Text */
+
 .egg-text {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  line-height: 1.8;
   color: #d0e7ff;
-  z-index: 2;
-  cursor: pointer;
+  margin: 0.4rem 0;
+  text-align: center;
+  text-shadow: 0 0 4px #000;
 }
 
-/* Clickable Hover Effect */
-.clickable {
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.clickable:hover {
-  color: #ffffff;
-  text-shadow: 0 0 5px #00d9ff;
-}
-
-/* Mobile Tweaks */
-@media (max-width: 768px) {
-  .egg-main-title {
-    font-size: 2.2rem;
-  }
-
-  .egg-subtitle {
-    font-size: 1.5rem;
-  }
-
-  .egg-text {
-    font-size: 1rem;
-  }
+.featured-card .egg-text {
+  text-shadow: 0 0 6px #00f7ff, 0 0 3px #0088ff;
 }

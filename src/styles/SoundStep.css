@@ -1,63 +1,89 @@
-.soundstep-bg {
+/* Reusing unified style */
+
+.rev-page {
   position: relative;
+  padding: 5rem 1rem;
   min-height: 100vh;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 1rem;
+  flex-direction: column;
+  z-index: 1;
 }
 
-.soundstep-bg::before {
-  content: "";
+.rev-background {
   position: absolute;
   inset: 0;
-  background: url("/src/assets/rev-guide/Main/Revelations.webp") no-repeat center center/cover;
-  filter: blur(8px) brightness(0.25);
+  background: url('/src/assets/rev-guide/Main/Revelations.webp') no-repeat center center/cover;
+  filter: blur(10px) brightness(0.3);
   z-index: 0;
-  animation: floatBG 40s ease-in-out infinite alternate;
+  animation: bgFloat 40s ease-in-out infinite alternate;
 }
 
-@keyframes floatBG {
+@keyframes bgFloat {
   0% {
-    transform: scale(1) translate(0, 0);
+    transform: scale(1) translate(0px, 0px);
   }
   100% {
     transform: scale(1.05) translate(10px, 10px);
   }
 }
 
-.soundstep-content {
+.sk-container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1200px;
   text-align: center;
   color: #aad4ff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
 }
 
-.soundstep-title {
-  font-size: 3rem;
-  font-family: 'Orbitron', sans-serif;
+.sk-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #cce6ff;
   text-shadow: 2px 2px 6px #000;
 }
 
-.soundstep-video {
-  max-width: 800px;
+/* Wraps video + cards */
+.rev-glow-box {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  border: 2px solid rgba(109, 194, 255, 0.5);
+  box-shadow: 0 0 40px rgba(109, 194, 255, 0.35), 0 0 80px rgba(0, 255, 255, 0.15) inset;
+  padding: 2rem 1.5rem;
+  max-width: 1000px;
   width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 30px #00f0ff88, 0 0 60px #00c3ff44;
-  z-index: 3;
-  position: relative;
-  background: #000; /* fixes border glitches if iframe is smaller */
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  z-index: 2;
 }
 
+.video-card {
+  width: 100%;
+  max-width: 960px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+  border: 4px solid rgba(109, 194, 255, 0.8);
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
 
+.video-caption {
+  font-size: 0.95rem;
+  color: #aad4ff;
+  padding: 0.5rem 0;
+  text-shadow: 1px 1px 2px #000;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* === Sound Carousel === */
 .carousel-wrapper {
   display: flex;
   justify-content: center;
@@ -66,86 +92,85 @@
   height: 260px;
 }
 
-.card {
+.sound-card {
   position: absolute;
-  width: 240px;
-  height: 210px;
+  width: 300px;
+  min-height: 180px;
   border-radius: 16px;
-  overflow: hidden;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
   border: 2px solid #00c3ff;
-  box-shadow: 0 0 25px #00c3ff66;
+  box-shadow: 0 0 20px rgba(109, 194, 255, 0.3);
   color: #aad4ff;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(6px);
   transition: transform 0.5s ease, opacity 0.4s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transform-style: preserve-3d;
-  padding: 0.8rem;
   z-index: 1;
 }
 
 .card-overlay {
   position: absolute;
   inset: 0;
-  background: url("/src/assets/rev-guide/Main/RevRed.jpg") no-repeat center center/cover;
-  filter: blur(6px) brightness(0.3);
+  background: url('/src/assets/rev-guide/Main/RevRed.jpg') no-repeat center center/cover;
+  filter: blur(8px) brightness(0.5);
+  opacity: 0.8;
   z-index: 0;
+  border-radius: 16px;
   pointer-events: none;
 }
 
-.card h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.1rem;
-  margin-bottom: 0.6rem;
-  z-index: 1;
+
+.sound-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #cce6ff;
   text-shadow: 1px 1px 3px #000;
 }
 
 .card-buttons {
-  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 90%;
+  z-index: 2;
+  width: 100%;
 }
 
 .card-buttons button {
-  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.2), rgba(10, 10, 30, 0.85));
+  background: transparent;
   border: 2px solid #00c3ff;
   border-radius: 6px;
-  padding: 0.6rem;
+  padding: 0.5rem 1rem;
   color: #aad4ff;
   font-family: 'Orbitron', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
-  text-shadow: 0 0 4px #00f7ff, 0 0 8px #00e6ff;
-  box-shadow: inset 0 0 12px rgba(0, 191, 255, 0.3), 0 0 8px rgba(0, 191, 255, 0.3);
+  text-shadow: 0 0 5px #00d9ff;
+  box-shadow: inset 0 0 12px rgba(0, 191, 255, 0.25), 0 0 10px rgba(0, 191, 255, 0.3);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .card-buttons button:hover {
-  background: rgba(0, 255, 255, 0.3);
+  background: rgba(0, 255, 255, 0.2);
   transform: scale(1.04);
 }
 
-.card.center {
-  transform: translateX(0) scale(1.1); /* slightly smaller scale */
+/* Carousel positions */
+.sound-card.center {
+  transform: translateX(0) scale(1.1);
   z-index: 3;
 }
-
-.card.left {
-  transform: translateX(-280px) scale(0.82) rotateY(12deg); /* tightened spacing */
+.sound-card.left {
+  transform: translateX(-270px) scale(0.85) rotateY(12deg);
   opacity: 0.6;
   z-index: 2;
 }
-
-.card.right {
-  transform: translateX(280px) scale(0.82) rotateY(-12deg);
+.sound-card.right {
+  transform: translateX(270px) scale(0.85) rotateY(-12deg);
   opacity: 0.6;
   z-index: 2;
 }

@@ -32,7 +32,7 @@ function SoundStep() {
 
   const opts = {
     width: "100%",
-    height: "360",
+    height: "400",
     playerVars: {
       autoplay: 0,
       controls: 1,
@@ -47,48 +47,49 @@ function SoundStep() {
   const getPosition = (i) => {
     if (i === currentIndex) return "center";
     if ((i + 1) % areaList.length === currentIndex) return "left";
-    if ((i - 1 + areaList.length) % areaList.length === currentIndex)
-      return "right";
+    if ((i - 1 + areaList.length) % areaList.length === currentIndex) return "right";
     return "off";
   };
 
   return (
-    <div className="soundstep-bg">
-      <div className="soundstep-content">
-        <h1 className="soundstep-title">Sound Step</h1>
+    <div className="rev-page">
+      <div className="rev-background" />
+      <div className="sk-container">
+        <h1 className="sk-title">Sound Step</h1>
 
-        <YouTube
-          videoId="tt3mpH7Rrfo"
-          opts={opts}
-          onReady={onPlayerReady}
-          className="soundstep-video"
-        />
+        <div className="rev-glow-box">
+          <div className="video-card">
+            <YouTube
+              videoId="tt3mpH7Rrfo"
+              opts={opts}
+              onReady={onPlayerReady}
+              className="sk-video"
+            />
+            <div className="video-caption">(Click a section or location to play)</div>
+          </div>
 
-        <div className="carousel-wrapper">
-          {areaList.map((area, i) => {
-            const pos = getPosition(i);
-            if (pos === "off") return null;
+          <div className="carousel-wrapper">
+            {areaList.map((area, i) => {
+              const pos = getPosition(i);
+              if (pos === "off") return null;
 
-            return (
-              <div
-                key={area}
-                className={`card ${pos}`}
-                onClick={() => setCurrentIndex(i)}
-              >
-                <div className="card-overlay" />
-                <h2>{area}</h2>
-                {pos === "center" && (
-                  <div className="card-buttons">
-                    {groupedData[area].map((spot, index) => (
-                      <button key={index} onClick={() => handleClick(spot.start)}>
-                        {spot.label}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+              return (
+                <div key={area} className={`sound-card ${pos}`} onClick={() => setCurrentIndex(i)}>
+                  <div className="card-overlay" />
+                  <h2 className="egg-subtitle">{area}</h2>
+                  {pos === "center" && (
+                    <div className="card-buttons">
+                      {groupedData[area].map((spot, index) => (
+                        <button key={index} onClick={() => handleClick(spot.start)}>
+                          {spot.label}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         <div className="spinner-controls">
