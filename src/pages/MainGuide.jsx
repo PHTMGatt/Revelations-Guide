@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import apothiconSteps from '../data/apothiconSteps';
+import apothiconSteps from '../data/ApothiconSteps';
 import '../styles/MainGuide.css';
 
 const MainGuide = () => {
