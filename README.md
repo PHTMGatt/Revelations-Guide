@@ -5,7 +5,7 @@
 ## 🚀 Live Demo
 
 Explore the portal:  
-[https://your-revelations-guide.onrender.com](https://your-revelations-guide.onrender.com)
+[https://revelations-guide.onrender.com](https://revelations-guide.onrender.com)
 
 ## 📸 Screenshot
 
