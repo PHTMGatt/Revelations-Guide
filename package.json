@@ -4,11 +4,11 @@
   "description": "A cosmic-themed Revelations Easter Egg guide built in React + Vite.",
   "main": "src/main.jsx",
   "scripts": {
+   "start": "serve -s dist",
     "dev": "vite",
-    "start": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 10000",
-    "render": "vite preview --port 10000"
+    "preview": "vite preview",
+    "render-build": "npm install && npm run build"
   },
   "keywords": [
     "react",
