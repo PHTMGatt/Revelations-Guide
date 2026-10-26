@@ -9,7 +9,7 @@ Explore the portal:
 
 ## 📸 Screenshot
 
-![App Screenshot](src/assets/images/ReadMe.png)
+![App Screenshot](docs/portfolio/cover.webp)
 
 ## 🗺️ What’s Inside
 
