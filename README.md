@@ -9,7 +9,7 @@ Explore the portal:
 
 ## 📸 Screenshot
 
-![App Screenshot](src/assets/images/ReadMe.png)
+![Revelations portfolio artwork](https://raw.githubusercontent.com/PHTMGatt/12-React-Portfolio/a2c43d8301679dbda14ad06dc225d61e5515e431/src/assets/project-images/Rev.png)
 
 ## 🗺️ What’s Inside
 
