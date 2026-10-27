@@ -9,7 +9,7 @@ Explore the portal:
 
 ## 📸 Screenshot
 
-![App Screenshot](docs/portfolio/cover.webp)
+![App Screenshot](https://raw.githubusercontent.com/PHTMGatt/12-React-Portfolio/main/src/assets/photos/Rev.png)
 
 ## 🗺️ What’s Inside
 
