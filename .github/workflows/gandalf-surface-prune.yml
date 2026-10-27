@@ -1,0 +1,38 @@
+name: One-time stale branch cleanup
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/gandalf-surface-prune.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Archive and prune stale branches
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          default_branch="$(gh api "repos/${GITHUB_REPOSITORY}" --jq '.default_branch')"
+          git fetch origin '+refs/heads/*:refs/remotes/origin/*'
+          while IFS= read -r ref; do
+            branch="${ref#origin/}"
+            [[ "$branch" == "HEAD" ]] && continue
+            [[ "$branch" == "main" ]] && continue
+            [[ "$branch" == "$default_branch" ]] && continue
+            sha="$(git rev-parse "refs/remotes/origin/$branch")"
+            safe="$(printf '%s' "$branch" | tr '/ ' '--' | tr -cd 'A-Za-z0-9._-')"
+            tag="branch-archive-${safe}-20261027-${sha:0:8}"
+            if ! git ls-remote --exit-code --tags origin "refs/tags/$tag" >/dev/null 2>&1; then
+              git push origin "$sha:refs/tags/$tag"
+            fi
+            git push origin --delete "$branch"
+          done < <(git for-each-ref --format='%(refname:short)' refs/remotes/origin/ | sort)
